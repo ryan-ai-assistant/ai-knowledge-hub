@@ -1,0 +1,50 @@
+version: 1
+paths:
+  prompts: "prompts"
+  templates: "templates"
+  frameworks: "frameworks"
+  inbox: "_inbox"
+  catalog_report: "catalog/ingest_report.md"
+
+defaults:
+  modules:
+    prompts:
+      - "/prompts/_modules/style/no-extras.md"
+      - "/prompts/_modules/tone/human.md"
+    templates:
+      - "/prompts/_modules/style/no-extras.md"
+    frameworks: []
+  audience: "internal_staff"
+  model: "GPT-5"
+  owner: "ryan.brock"
+
+tag_synonyms:
+  "strategy": ["planning","plan","roadmap","rollout","implementation"]
+  "strategy/district": ["district-strategy","district","adoption","rollout-district"]
+  "communication/district": ["external","partner","district-comm","stakeholder"]
+  "communication/internal/slack": ["slack","internal-slack","chatter","im"]
+  "communication/internal/email": ["internal-email","email-internal"]
+  "analytics/internal": ["analysis","internal-analytics","report-internal"]
+  "analytics/external": ["report-external","board","public-summary"]
+  "education/math": ["math","eureka-math","em","numeracy"]
+  "education/ela": ["ela","literacy","wit-wisdom","reading"]
+
+  "templates/meeting-summary": ["meeting-summary","minutes","recap","debrief"]
+  "templates/reminder-email": ["reminder","follow-up","followup","invite","logistics"]
+  "templates/session-recap": ["session-recap","training-recap","pl-recap"]
+  "frameworks/implementation-success": ["implementation-success","adoption-framework"]
+  "frameworks/project-plan": ["project-plan","event","pln","series-plan"]
+  "frameworks/partner-response": ["partner-response","external-response"]
+  "frameworks/internal-response": ["internal-response","internal-answer"]
+  "frameworks/digesting-information": ["digest","synthesis","summarize-sources"]
+  "frameworks/create-from-knowledge": ["reuse-knowledge","compose-from-notes"]
+
+style_bans:
+  emojis: true
+  em_dashes: true
+  banned_phrases:
+    - "as an AI"
+    - "delve"
+    - "leverage synergies"
+    - "cutting-edge"
+    - "unlock unprecedented"
